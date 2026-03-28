@@ -58,29 +58,29 @@ export const dummyStoreData = {
 export const productDummyData = [
     {
         id: "prod_1",
-        name: "Modern table lamp",
-        description: "Modern table lamp with a sleek design. It's perfect for any room. It's made of high-quality materials and comes with a lifetime warranty. Enhance your audio experience with this earbuds. Indulge yourself in a world of pure sound with 50 hours of uninterrupted playtime. Equipped with the cutting-edge Zen Mode Tech ENC and BoomX Tech, prepare to be enthralled by a symphony of crystal-clear melodies.",
-        mrp: 40,
-        price: 29,
+        name: "Dusty Pink Tee",
+        description: "A gentle, quiet presence. The dusty pink tee is a soft, muted shade that evokes a sense of calm and understated elegance. It's the perfect blend of warmth and subtlety, making it a versatile choice for any wardrobe. Whether paired with jeans for a casual look or dressed up with accessories, the dusty pink tee adds a touch of sophistication and timeless charm to your outfit.",
+        mrp: 999,
+        price: 940,
         images: [dusty_pink, jet_black, pure_white, baby_blue],
         category: "Decoration",
-        storeId: "seller_1",
+        storeId: "seller_1",//
         inStock: true,
-        store: dummyStoreData,
+        store: dummyStoreData,//
         rating: dummyRatingsData,
         createdAt: 'Sat Jul 29 2025 14:51:25 GMT+0530 (India Standard Time)',
         updatedAt: 'Sat Jul 29 2025 14:51:25 GMT+0530 (India Standard Time)',
     },
     {
         id: "prod_2",
-        name: "Smart speaker gray",
-        description: "Smart speaker with a sleek design. It's perfect for any room. It's made of high-quality materials and comes with a lifetime warranty.",
-        mrp: 50,
-        price: 29,
+        name: "Jet Black Tee",
+        description: "A bold, striking choice. The jet black tee is a timeless piece that adds a touch of sophistication to any outfit. Its sleek design and premium fabric make it a must-have in your wardrobe.",
+        mrp: 999,
+        price: 940,
         images: [jet_black],
-        storeId: "seller_1",
+        storeId: "seller_1",//
         inStock: true,
-        store: dummyStoreData,
+        store: dummyStoreData,//
         category: "Speakers",
         rating: dummyRatingsData,
         createdAt: 'Sat Jul 28 2025 14:51:25 GMT+0530 (India Standard Time)',
@@ -88,14 +88,14 @@ export const productDummyData = [
     },
     {
         id: "prod_3",
-        name: "Smart watch white",
-        description: "Smart watch with a sleek design. It's perfect for any room. It's made of high-quality materials and comes with a lifetime warranty.",
-        mrp: 60,
-        price: 29,
+        name: "Pure White Tee",
+        description: "A clean, classic choice. The pure white tee is a staple in any wardrobe, offering a timeless look that pairs well with everything from jeans to tailored trousers.",
+        mrp: 999,
+        price: 940,
         images: [pure_white],
-        storeId: "seller_1",
+        storeId: "seller_1",//
         inStock: true,
-        store: dummyStoreData,
+        store: dummyStoreData,//
         category: "Watch",
         rating: dummyRatingsData,
         createdAt: 'Sat Jul 27 2025 14:51:25 GMT+0530 (India Standard Time)',
@@ -103,14 +103,14 @@ export const productDummyData = [
     },
     {
         id: "prod_4",
-        name: "Wireless headphones",
-        description: "Wireless headphones with a sleek design. It's perfect for any room. It's made of high-quality materials and comes with a lifetime warranty.",
-        mrp: 70,
-        price: 29,
+        name: "Baby Blue Tee",
+        description: "A soft, soothing choice. The baby blue tee is a gentle, pastel shade that adds a touch of innocence and charm to any outfit. Its lightweight fabric and comfortable fit make it a great addition to your casual wardrobe.",
+        mrp: 999,
+        price: 940,
         images: [baby_blue],
-        storeId: "seller_1",
+        storeId: "seller_1",//
         inStock: true,
-        store: dummyStoreData,
+        store: dummyStoreData,//
         category: "Headphones",
         rating: dummyRatingsData,
         createdAt: 'Sat Jul 26 2025 14:51:25 GMT+0530 (India Standard Time)',
