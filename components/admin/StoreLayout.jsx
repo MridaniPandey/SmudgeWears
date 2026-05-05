@@ -3,30 +3,42 @@ import { useEffect, useState } from "react"
 import Loading from "../Loading"
 import Link from "next/link"
 import { ArrowRightIcon } from "lucide-react"
-import SellerNavbar from "./StoreNavbar"
-import SellerSidebar from "./StoreSidebar"
-import { dummyStoreData } from "@/assets/assets"
+import SellerNavbar from "../admin/StoreNavbar"
+import SellerSidebar from "../admin/StoreSidebar"
+
+import { useAuth } from "@clerk/nextjs"
+import { set } from "date-fns"
 
 const StoreLayout = ({ children }) => {
 
+    const  {getToken} =useAuth()
 
-    const [isSeller, setIsSeller] = useState(false)
+    const [isAdmin, setIsAdmin] = useState(false)
     const [loading, setLoading] = useState(true)
     const [storeInfo, setStoreInfo] = useState(null)
 
-    const fetchIsSeller = async () => {
-        setIsSeller(true)
-        setStoreInfo(dummyStoreData)
-        setLoading(false)
-    }
+    const fetchIsAdmin = async () => {
+        try{
+            const token = await getToken()
+            const {data} =await axios.get('/api/store/is_admin', {headers:{
+                Authorization: `Bearer ${token}`}})
+                setIsAdmin(data.isAdmin)
+                setStoreInfo(data.storeInfo)
+            } catch (error) {
+                console.log( error)
+            } finally {
+                setLoading(false)
+            }
+        }
+    
 
     useEffect(() => {
-        fetchIsSeller()
+        fetchIsAdmin()
     }, [])
 
     return loading ? (
         <Loading />
-    ) : isSeller ? (
+    ) : isAdmin ? (
         <div className="flex flex-col h-screen">
             <SellerNavbar />
             <div className="flex flex-1 items-start h-full overflow-y-scroll no-scrollbar">

@@ -1,4 +1,4 @@
-import { PlusIcon, SquarePenIcon, XIcon } from 'lucide-react';
+import { PlusIcon, SquarePen, XIcon } from 'lucide-react';
 import React, { useState } from 'react'
 import AddressModal from './AddressModal';
 import { useSelector } from 'react-redux';
@@ -48,7 +48,7 @@ const OrderSummary = ({ totalPrice, items }) => {
                     selectedAddress ? (
                         <div className='flex gap-2 items-center'>
                             <p>{selectedAddress.name}, {selectedAddress.city}, {selectedAddress.state}, {selectedAddress.zip}</p>
-                            <SquarePenIcon onClick={() => setSelectedAddress(null)} className='cursor-pointer' size={18} />
+                            <SquarePen onClick={() => setSelectedAddress(null)} className='cursor-pointer' size={18} />
                         </div>
                     ) : (
                         <div>

@@ -7,14 +7,22 @@ import { productDummyData } from "@/assets/assets"
 
 export default function StoreManageProducts() {
 
+    const {getToken} = useAuth()
+
+    const {user} =useUser()
+
     const currency = process.env.NEXT_PUBLIC_CURRENCY_SYMBOL || '$'
 
     const [loading, setLoading] = useState(true)
     const [products, setProducts] = useState([])
 
     const fetchProducts = async () => {
-        setProducts(productDummyData)
-        setLoading(false)
+        try{
+
+        }
+        catch(error){
+            toast.error(error?.response?.data?.error || error.message)
+        }
     }
 
     const toggleStock = async (productId) => {

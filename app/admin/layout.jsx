@@ -3,8 +3,8 @@ import { Show, SignIn } from "@clerk/nextjs";
 
 
 export const metadata = {
-    title: "GoCart. - Admin",
-    description: "GoCart. - Admin",
+    title: "SmudgeWears - Admin",
+    description: "SmudgeWears - Admin",
 };
 
 export default async function RootAdminLayout({ children }) {

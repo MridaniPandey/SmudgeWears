@@ -1,4 +1,5 @@
-import gs_logo from "./gs_logo.jpg"
+
+import sw_logo from "./sw_logo.png"
 import happy_store from "./happy_store.webp"
 import upload_area from "./upload_area.svg"
 import hero_model_img from "./hero_model_img.png"
@@ -11,6 +12,7 @@ import jet_black from "./jet_black.jpg"
 import pure_white from "./pure_white.jpg"
 import baby_blue from "./baby_blue.jpg"
 
+
 import { ClockFadingIcon, HeadsetIcon, SendIcon } from "lucide-react";
 import profile_pic1 from "./profile_pic1.jpg"
 import profile_pic2 from "./profile_pic2.jpg"
@@ -18,8 +20,8 @@ import profile_pic3 from "./profile_pic3.jpg"
 
 export const assets = {
     upload_area, hero_model_img,model_img,pink_model_img,
-    hero_product_img1, hero_product_img2, gs_logo,
-    dusty_pink, jet_black, pure_white, baby_blue,
+    hero_product_img1, hero_product_img2, 
+    dusty_pink, jet_black, pure_white, baby_blue,sw_logo
 }
 
 export const categories = ["Dusty Pink Tee", "Jet Black Tee", "Pure White Tee", "Baby Blue Tee"];
@@ -51,7 +53,7 @@ export const dummyStoreData = {
         id: "user_31dOriXqC4TATvc0brIhlYbwwc5",
         name: "Great Stack",
         email: "user.greatstack@gmail.com",
-        image: gs_logo,
+        image: sw_logo,
     }
 }
 
@@ -60,8 +62,8 @@ export const productDummyData = [
         id: "prod_1",
         name: "Dusty Pink Tee",
         description: "A gentle, quiet presence. The dusty pink tee is a soft, muted shade that evokes a sense of calm and understated elegance. It's the perfect blend of warmth and subtlety, making it a versatile choice for any wardrobe. Whether paired with jeans for a casual look or dressed up with accessories, the dusty pink tee adds a touch of sophistication and timeless charm to your outfit.",
-        mrp: 999,
-        price: 940,
+        mrp: 760,
+        price: 760,
         images: [dusty_pink, jet_black, pure_white, baby_blue],
         category: "Decoration",
         storeId: "seller_1",//
@@ -75,8 +77,8 @@ export const productDummyData = [
         id: "prod_2",
         name: "Jet Black Tee",
         description: "A bold, striking choice. The jet black tee is a timeless piece that adds a touch of sophistication to any outfit. Its sleek design and premium fabric make it a must-have in your wardrobe.",
-        mrp: 999,
-        price: 940,
+        mrp: 760,
+        price: 760,
         images: [jet_black],
         storeId: "seller_1",//
         inStock: true,
@@ -90,8 +92,8 @@ export const productDummyData = [
         id: "prod_3",
         name: "Pure White Tee",
         description: "A clean, classic choice. The pure white tee is a staple in any wardrobe, offering a timeless look that pairs well with everything from jeans to tailored trousers.",
-        mrp: 999,
-        price: 940,
+        mrp: 760,
+        price: 760,
         images: [pure_white],
         storeId: "seller_1",//
         inStock: true,
@@ -105,8 +107,8 @@ export const productDummyData = [
         id: "prod_4",
         name: "Baby Blue Tee",
         description: "A soft, soothing choice. The baby blue tee is a gentle, pastel shade that adds a touch of innocence and charm to any outfit. Its lightweight fabric and comfortable fit make it a great addition to your casual wardrobe.",
-        mrp: 999,
-        price: 940,
+        mrp: 760,
+        price: 760,
         images: [baby_blue],
         storeId: "seller_1",//
         inStock: true,
@@ -150,7 +152,7 @@ export const dummyUserData = {
     id: "user_31dQbH27HVtovbs13X2cmqefddM",
     name: "GreatStack",
     email: "greatstack@example.com",
-    image: gs_logo,
+    image: sw_logo,
     cart: {}
 }
 
@@ -208,7 +210,7 @@ export const storesDummyData = [
         address: "123 Maplewood Drive Springfield, IL 62704 USA",
         status: "approved",
         isActive: true,
-        logo: gs_logo,
+        logo: sw_logo,
         email: "greatstack@example.com",
         contact: "+0 1234567890",
         createdAt: "2025-08-22T08:22:16.189Z",

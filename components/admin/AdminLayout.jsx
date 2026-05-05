@@ -5,6 +5,8 @@ import Link from "next/link"
 import { ArrowRightIcon } from "lucide-react"
 import AdminNavbar from "./AdminNavbar"
 import AdminSidebar from "./AdminSidebar"
+// import SellerNavbar from "../admin/StoreNavbar"
+// import SellerSidebar from "../admin/StoreSidebar"
 import { useUser,useAuth } from "@clerk/nextjs"
 import axios from "axios"
 
@@ -15,16 +17,18 @@ const AdminLayout = ({ children }) => {
 
     const [isAdmin, setIsAdmin] = useState(false)
     const [loading, setLoading] = useState(true)
+    const [storeInfo, setStoreInfo] = useState(null)
 
     const fetchIsAdmin = async () => {
        try{
         const token = await getToken()
-        const {data} = await axios.get('/api/admin/isAdmin', {
+        const {data} = await axios.get('/api/admin/is_admin', {
              headers: {
                 Authorization: `Bearer ${token}`,
             },
         })
         setIsAdmin(data.isAdmin)
+        setStoreInfo(data.storeInfo)
     }
        catch(err){
         console.log(err)

@@ -1,27 +1,29 @@
 'use client'
 
 import { usePathname } from "next/navigation"
-import { HomeIcon, ShieldCheckIcon, StoreIcon, TicketPercentIcon } from "lucide-react"
+import { HomeIcon, PlusSquare, ShieldCheckIcon, SquarePen, StoreIcon, TicketPercentIcon ,LayoutListIcon} from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { assets } from "@/assets/assets"
 
 const AdminSidebar = () => {
-
+    
     const pathname = usePathname()
 
     const sidebarLinks = [
         { name: 'Dashboard', href: '/admin', icon: HomeIcon },
-        { name: 'Stores', href: '/admin/stores', icon: StoreIcon },
-        { name: 'Approve Store', href: '/admin/approve', icon: ShieldCheckIcon },
+        { name: 'Add Product', href: '/admin/add-product', icon: PlusSquare },
+        { name: 'Manage Product', href: '/admin/manage-product', icon: SquarePen},
+        { name: 'Orders', href: '/admin/orders', icon: LayoutListIcon },
+        //{ name: 'Stores', href: '/admin/stores', icon: StoreIcon },
         { name: 'Coupons', href: '/admin/coupons', icon: TicketPercentIcon  },
     ]
 
     return (
         <div className="inline-flex h-full flex-col gap-5 border-r border-slate-200 sm:min-w-60">
             <div className="flex flex-col gap-3 justify-center items-center pt-8 max-sm:hidden">
-                <Image className="w-14 h-14 rounded-full" src={assets.gs_logo} alt="" width={80} height={80} />
-                <p className="text-slate-700">Hi, GreatStack</p>
+                <Image className="w-14 h-14 rounded-full" src={assets.sw_logo} alt="" width={80} height={80} />
+                <p className="text-slate-700">Hi, Admin</p>
             </div>
 
             <div className="max-sm:mt-6">
@@ -32,6 +34,7 @@ const AdminSidebar = () => {
                             <p className="max-sm:hidden">{link.name}</p>
                             {pathname === link.href && <span className="absolute bg-green-500 right-0 top-1.5 bottom-1.5 w-1 sm:w-1.5 rounded-l"></span>}
                         </Link>
+                       
                     ))
                 }
             </div>

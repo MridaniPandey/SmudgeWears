@@ -1,6 +1,6 @@
 'use client'
 import { usePathname } from "next/navigation"
-import { HomeIcon, LayoutListIcon, SquarePenIcon, SquarePlusIcon } from "lucide-react"
+import { HomeIcon, LayoutListIcon, SquarePen, PlusSquare } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -10,8 +10,8 @@ const StoreSidebar = ({storeInfo}) => {
 
     const sidebarLinks = [
         { name: 'Dashboard', href: '/store', icon: HomeIcon },
-        { name: 'Add Product', href: '/store/add-product', icon: SquarePlusIcon },
-        { name: 'Manage Product', href: '/store/manage-product', icon: SquarePenIcon },
+        { name: 'Add Product', href: '/store/add-product', icon: PlusSquare },
+        { name: 'Manage Product', href: '/store/manage-product', icon: SquarePen },
         { name: 'Orders', href: '/store/orders', icon: LayoutListIcon },
     ]
 
